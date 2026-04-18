@@ -1,5 +1,5 @@
 # fullstack_G10
 Proyecto entregable Fullstack I
-hola que tal 
+
 
 
