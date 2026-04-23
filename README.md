@@ -1,4 +1,4 @@
-# SIVEBO
+# SIVEBO - Sistema de Ventas y Bodega
 **PROPUESTA DE PROYECTO**
 
 Sistema POS Integral para Operadores Polifuncionales
