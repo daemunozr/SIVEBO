@@ -19,12 +19,6 @@ import com.example.ms_sucursales.service.SucursalService;
 
 import jakarta.validation.Valid;
 
-
-
-
-
-
-
 @RestController
 @RequestMapping("/api/v1/sucursales")
 public class SucursalController {
