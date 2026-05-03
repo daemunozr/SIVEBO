@@ -69,6 +69,12 @@ public class SucursalController {
         public ResponseEntity<Sucursal> findByNombre(@RequestParam String nombre) {
             return ResponseEntity.ok(service.findByNombre(nombre));
         }
+
+        @GetMapping("/comuna/{id}")
+        public ResponseEntity<List<Sucursal>> findByComunaId(@PathVariable Long id) {
+            return ResponseEntity.ok(service.findByComunaId(id));
+        }
+        
         
         
         
