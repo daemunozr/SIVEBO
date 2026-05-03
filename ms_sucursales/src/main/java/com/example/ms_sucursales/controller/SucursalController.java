@@ -2,7 +2,6 @@ package com.example.ms_sucursales.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.ms_sucursales.dto.SucursalRequestDTO;
 import com.example.ms_sucursales.dto.SucursalResponseDTO;
-import com.example.ms_sucursales.model.Sucursal;
 import com.example.ms_sucursales.service.SucursalService;
 
 import jakarta.validation.Valid;
@@ -70,10 +68,5 @@ public class SucursalController {
                 service.deleteById(id);
                 return ResponseEntity.noContent().build();
         }
-
-        
-        
-        
-        
         
 }
