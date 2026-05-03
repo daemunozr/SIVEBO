@@ -2,10 +2,13 @@ package com.example.ms_sucursales.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.ms_sucursales.dto.SucursalResponseDTO;
+import com.example.ms_sucursales.dto.SucursalRequestDTO;
 import com.example.ms_sucursales.model.Sucursal;
 import com.example.ms_sucursales.repository.SucursalRepository;
 
@@ -18,24 +21,60 @@ public class SucursalService {
         @Autowired
         private SucursalRepository repository;
 
-        public List<Sucursal> findAll() {
-                return repository.findAll();
+        // DTO mapping method
+        private SucursalResponseDTO mapToDTO(Sucursal sucursal) {
+                return new SucursalResponseDTO(
+                        sucursal.getId(),
+                        sucursal.getNombre(),
+                        sucursal.getComunaId(),
+                        sucursal.getDireccionFisica(),
+                        sucursal.getTelefonoContacto()
+                );
         }
 
-        public Optional<Sucursal> findById(Long id) {
-                return repository.findById(id);
+        //CRUD methods
+        public List<SucursalResponseDTO> findAll() {
+                return repository.findAll().stream()
+                        .map(this::mapToDTO).collect(Collectors.toList());
         }
 
-        public List<Sucursal> findByComunaId(Long comunaId) {
-                return repository.findByComunaId(comunaId);
+        public Optional<SucursalResponseDTO> findById(Long id) {
+                return repository.findById(id).map(this::mapToDTO);
         }
 
-        public Sucursal findByNombre(String nombre) {
-                return repository.findByNombreContainingIgnoreCase(nombre);
+        public List<SucursalResponseDTO> findByComunaId(Long comunaId) {
+                return repository.findByComunaId(comunaId).stream()
+                        .map(this::mapToDTO).collect(Collectors.toList());
         }
 
-        public Sucursal save(Sucursal sucursal) {
-                return repository.save(sucursal);
+        public Optional<SucursalResponseDTO> findByNombre(String nombre) {
+                try {
+                        return repository.findByNombreContainingIgnoreCase(nombre).map(this::mapToDTO);
+                } catch (Exception exception) {
+                        exception.printStackTrace();
+                        return Optional.empty();
+                }
+        }
+
+        public SucursalResponseDTO save(SucursalRequestDTO dto) {
+                Sucursal sucursal = new Sucursal(
+                        null,
+                        dto.getNombre(),
+                        dto.getComunaId(),
+                        dto.getDireccionFisica(),
+                        dto.getTelefonoContacto()
+                );
+                return mapToDTO(repository.save(sucursal)) ;
+        }
+
+        public Optional<SucursalResponseDTO> update(Long id, SucursalRequestDTO dto) {
+                return repository.findById(id).map(existing -> {
+                        existing.setNombre(dto.getNombre());
+                        existing.setComunaId(dto.getComunaId());
+                        existing.setDireccionFisica(dto.getDireccionFisica());
+                        existing.setTelefonoContacto(dto.getTelefonoContacto());
+                        return mapToDTO(repository.save(existing));
+                });
         }
 
         public void deleteById(Long id) {

@@ -14,66 +14,64 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.ms_sucursales.dto.SucursalRequestDTO;
+import com.example.ms_sucursales.dto.SucursalResponseDTO;
 import com.example.ms_sucursales.model.Sucursal;
 import com.example.ms_sucursales.service.SucursalService;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/sucursales")
+@RequiredArgsConstructor
 public class SucursalController {
 
-        @Autowired
-        private SucursalService service;
+        private final SucursalService service;
 
         @GetMapping
-        public ResponseEntity<List<Sucursal>> findAll() {
-                List<Sucursal> sucursales = service.findAll();
-                if(sucursales.isEmpty()) {
-                        return ResponseEntity.noContent().build();
-                }
-                return ResponseEntity.ok(sucursales);
+        public ResponseEntity<List<SucursalResponseDTO>> findAll() {
+                return ResponseEntity.ok(service.findAll());
         }
 
         @GetMapping("/{id}")
-        public ResponseEntity<Sucursal> findById(@PathVariable Long id) {
+        public ResponseEntity<SucursalResponseDTO> findById(@PathVariable Long id) {
                 return service.findById(id)
                         .map(ResponseEntity::ok)
                         .orElse(ResponseEntity.notFound().build());
         }
 
+        @GetMapping("/comuna/{id}")
+        public ResponseEntity<List<SucursalResponseDTO>> findByComunaId(@PathVariable Long id) {
+            return ResponseEntity.ok(service.findByComunaId(id));
+        }
+
+        @GetMapping("/buscar")
+        public ResponseEntity<SucursalResponseDTO> findByNombre(@RequestParam String nombre) {
+            return service.findByNombre(nombre)
+                    .map(ResponseEntity::ok)
+                    .orElse(ResponseEntity.notFound().build());
+        }
+
         @PostMapping
-        public ResponseEntity<Sucursal> save(@Valid @RequestBody Sucursal sucursal) {
-            return ResponseEntity.status(201).body(service.save(sucursal));
+        public ResponseEntity<SucursalResponseDTO> save(@Valid @RequestBody SucursalRequestDTO dto) {
+            return ResponseEntity.status(201).body(service.save(dto));
         }
 
         @PutMapping("/{id}")
-        public ResponseEntity<Sucursal> update(@PathVariable Long id, @Valid @RequestBody Sucursal sucursal) {
-            return service.findById(id)
-                    .map(existingSucursal -> {
-                        sucursal.setId(existingSucursal.getId());
-                        return ResponseEntity.ok(service.save(sucursal));
-                    })
-                    .orElse(ResponseEntity.notFound().build());
+        public ResponseEntity<SucursalResponseDTO> update(@PathVariable Long id, @Valid @RequestBody SucursalRequestDTO dto) {
+            return service.update(id, dto).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
         }
         
         @DeleteMapping("/{id}")
-        public ResponseEntity<Void> deleteById(@PathVariable Long id) {
-                if (service.findById(id).isPresent())
+        public ResponseEntity<?> deleteById(@PathVariable Long id) {
+                if (service.findById(id).isEmpty())
                         return ResponseEntity.notFound().build();
                 service.deleteById(id);
                 return ResponseEntity.noContent().build();
         }
-        
-        @GetMapping("/buscar")
-        public ResponseEntity<Sucursal> findByNombre(@RequestParam String nombre) {
-            return ResponseEntity.ok(service.findByNombre(nombre));
-        }
 
-        @GetMapping("/comuna/{id}")
-        public ResponseEntity<List<Sucursal>> findByComunaId(@PathVariable Long id) {
-            return ResponseEntity.ok(service.findByComunaId(id));
-        }
+        
         
         
         
