@@ -451,3 +451,7 @@ build/
 
 ### VS Code ###
 .vscode/
+**/*.localz
+**/*.local
+**/*.git
+**/*.DS_Store
