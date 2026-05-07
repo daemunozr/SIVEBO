@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DBCC26CC-1C6F-CEF7-8879-D7BE7103F761" name="Caja_Sucursal">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:56:22 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D9D3AE49-97C7-BF35-81F8-C37DEEAE155F">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:56:37 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado_actual" id="035A7236-E368-4506-F7BE-210DB095B8A6">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:56:45 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5A9441C-A29C-55CD-1B88-B0547F617C88" name="Caja_Sucursal PK">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:56:44 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D9D3AE49-97C7-BF35-81F8-C37DEEAE155F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

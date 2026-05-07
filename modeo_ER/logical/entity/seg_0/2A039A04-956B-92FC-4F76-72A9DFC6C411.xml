@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2A039A04-956B-92FC-4F76-72A9DFC6C411" name="Token_Session">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:26:55 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="51506CC6-59B2-0820-6DBD-2F85B2F59E79">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:27:11 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="token" id="0B87419E-769B-4B18-1AA1-3D4EBE2B3A1B">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:27:24 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_expiracion" id="632915DB-08AF-AEE7-722B-F5BF10B81813">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:27:49 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F39531CF-74BE-CFD9-E7BF-3A5DFDB58CE6" name="Token_Session PK">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:28:09 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>51506CC6-59B2-0820-6DBD-2F85B2F59E79</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

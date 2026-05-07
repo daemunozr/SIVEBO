@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_1" directorySegmentName="seg_0" id="D6F1E1A1-224E-7FC4-02E2-A3F29E34A39F">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:23:16 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<sourceTransferable>false</sourceTransferable>
+<targetTransferable>false</targetTransferable>
+<sourcePk>1478F6DA-8E61-9A35-C94A-CCE434B3ADCB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>CFE91CD2-9FA1-B649-5ABE-68EB7356A8DB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>75022A21-B183-FC5F-C462-079D33844844</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

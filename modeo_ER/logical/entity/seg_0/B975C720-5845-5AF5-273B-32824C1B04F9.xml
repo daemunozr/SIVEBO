@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B975C720-5845-5AF5-273B-32824C1B04F9" name="Articulo_Embalaje">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:49:15 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="51FC6243-19A3-D364-BE3B-16F9970734CE">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:49:23 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="F882E20D-484B-36EC-BC3D-A9FD90270500">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:49:35 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="precio" id="8303D690-D91E-AF5C-FFFC-D69043683E7A">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:50:26 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="4E74B457-4307-CAB9-8250-E4D8B060EED4">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:50:00 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="148DE0DA-BEAA-78E7-DABA-AB1548D9233E" name="Articulo_Embalaje PK">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:49:42 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>51FC6243-19A3-D364-BE3B-16F9970734CE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

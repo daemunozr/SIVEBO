@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3434C004-CB90-45BE-3542-B7975B2CD0E9" name="Region">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:34:52 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="54FEEF31-D5C7-5AE6-7AA1-4E5037D13672">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:34:57 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="3145BCB4-A788-115B-6C8D-081680B38AA2">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:35:03 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F89EF160-43E9-14DE-73D2-D6B63FD55A76" name="Region PK">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:35:15 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<engineerTo>
+<item key="DBC50F28-F695-F8A4-E147-7FD9BA6FA9F7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>54FEEF31-D5C7-5AE6-7AA1-4E5037D13672</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modeo_ER" id="687A97F6-7126-BF8D-D97D-1E3392297DAE" version="3.5">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:16:10 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>687A97F6-7126-BF8D-D97D-1E3392297DAE</designId>
+</OSDM_Design>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="762C09CB-E4D8-609C-85B8-5DF909516C81" mainViewID="DC54B96E-3FC8-69A2-CC1F-984CD969FD82">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:16:10 UTC</createdTime>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

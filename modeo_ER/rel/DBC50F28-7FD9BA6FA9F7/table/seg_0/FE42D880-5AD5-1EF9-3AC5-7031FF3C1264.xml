@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FE42D880-5AD5-1EF9-3AC5-7031FF3C1264" name="Rol">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:26:12 UTC</createdTime>
+<generatorID>CFE91CD2-9FA1-B649-5ABE-68EB7356A8DB</generatorID>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rol" id="F1E9DE47-5628-3631-01C5-CEECDB681CC8">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:26:12 UTC</createdTime>
+<generatorID>30371EEE-8913-017F-F052-85851B0F71BC</generatorID>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_rol" id="AB06DCC9-783C-502E-3703-CBEE2A1C638F">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:26:12 UTC</createdTime>
+<generatorID>CFFEBF6B-A694-5110-D5CC-EA0F2EF75171</generatorID>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="6F31F6EB-4BAF-C9A9-8E2A-152304B8D748">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:26:12 UTC</createdTime>
+<generatorID>2C5E4A34-B7EB-27E1-FEC9-D91EFCC65B48</generatorID>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C9EC97E-3F76-50CD-7180-6EB0CD9D2AD7" name="Rol_PK">
+<createdBy>AO-Alumno</createdBy>
+<createdTime>2026-05-07 00:26:12 UTC</createdTime>
+<generatorID>1478F6DA-8E61-9A35-C94A-CCE434B3ADCB</generatorID>
+<ownerDesignName>modeo_ER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F1E9DE47-5628-3631-01C5-CEECDB681CC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
